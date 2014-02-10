@@ -6,6 +6,10 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+execute "cp /vagrant/sources.list /etc/apt/" do
+    action :run
+end
+
 execute "apt-get update" do
     action :run
 end

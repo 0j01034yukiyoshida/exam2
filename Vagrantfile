@@ -115,4 +115,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # chef-validator, unless you changed the configuration.
   #
   #   chef.validation_client_name = "ORGNAME-validator"
+config.vm.provision :chef_solo do |chef|
+	chef.cookbooks_path = "cookbooks"
+	chef.add_recipe "web"
+end
 end
